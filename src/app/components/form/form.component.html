@@ -1,0 +1,79 @@
+<!-- <form #formCar="ngForm" (ngSubmit)="onSubmit(formCar.value)"> -->
+
+<!-- <select name="Rmarca" id="Rmarca" >
+    <option *ngFor="let pokemon of pokemones" value="{{pokemon.name}}">
+        {{pokemon.name}}
+    </option>
+</select> -->
+
+    <!-- <select name="Rmodelo" id="Rmodelo" >
+        <option *ngFor="let modelo of pokemones2" value="{{modelo.name}}">
+            {{modelo.name}}
+        </option>
+    </select> -->
+
+
+<!-- </form> -->
+
+<!-- <table >
+    <thead>
+        <tr>
+            <th>Marca</th>
+            <th>Modelo</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let carro of carros">
+        <td>{{ carro.marca }}</td>
+        <td >{{ carro.modelo }}</td>
+      </tr>
+    </tbody>
+  </table> -->
+
+<form #formCar="ngForm" (ngSubmit)="onSubmit(formCar.value)">
+
+  <div class="mb-3 text-center">
+    <h1>Examen de Prueba</h1>
+</div>
+
+<div class="mb-3" >
+    <label for="exampleFormControlInput1" class="form-label dark">Nombre del Pokemon</label>
+    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="Rmarca" id="Rmarca" [(ngModel)]="pokemon3.name">
+        <option *ngFor="let pokemon of pokemones" value="{{pokemon.name}}">
+            {{pokemon.name}}
+        </option>
+    </select>
+
+  <label for="exampleFormControlInput1" class="form-label">Pokemon que inicia con la letra {{letra}}</label>
+  <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"  >
+    <option *ngFor="let pokemon of pokemones2" value={{pokemon.name}}>
+        {{pokemon.name}}
+    </option>
+  </select>
+</div>
+
+
+<div class="d-grid gap-2">
+<button class="btn btn-dark" type="submit" >Guardar</button>
+<!-- <label>{{ textoMostrado }} {{ textoMostrado2 }}</label> -->
+</div>
+
+
+</form>
+
+
+<div class="d-grid gap-2">
+    <table class="table table-dark table-striped-columns my-4">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of pokemonInterface2">
+            <td>{{ item.name }}</td>
+          </tr>
+        </tbody>
+      </table>
+    
+  </div>
